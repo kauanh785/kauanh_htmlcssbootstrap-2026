@@ -1,19 +1,227 @@
 <!doctype html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>mtec informática para internet</title> 
-         <link href=css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-  <body>
-    <nav class="navbar bg-body-tertriry">
-      <div class="container">
-        
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mtec Informática para Internet</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- CORRIGIDO: estilo.css está na raiz do projeto, ao lado do index.html -->
+    <link href="estilo.css" rel="stylesheet" />
+  </head>
+
+  <body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md bg-dark fixed-top text-uppercase">
+      <div class="container-fluid">
+        <a class="navbar-brand active" href="index.html">
+          <!-- CORRIGIDO: nome real do arquivo na pasta imagens -->
+          <img
+            src="imagens/logo_dragão.png"
+            alt="Logo Mtec"
+            width="60"
+            height="60"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuprincipal"
+          aria-controls="menuprincipal"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuprincipal">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="primeiro.html"> 1ª Série </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="segundo.html"> 2ª Série </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="terceiro.html"> 3ª Série </a>
+            </li>
+          </ul>
+
+          <a href="#matricula" class="btn btn-primary"> Matricule-se </a>
+        </div>
       </div>
     </nav>
-    <h1 class="text-primary">metc informática para internet</h1>
-    <p>1a. série - 2026 </p>
-     <script src="js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+    <header
+      class="banner text-white"
+      style="
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(26, 16, 51, 0.94) 0%,
+            rgba(26, 16, 51, 0.76) 48%,
+            rgba(26, 16, 51, 0.3) 100%
+          ),
+          url(&quot;imagens/banner_dragão.png&quot;);
+
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h1 class="display-5 fw-bold">Mtec Informática para Internet</h1>
+
+            <p class="text-uppercase small fw-semibold mb-2">
+              Etec Prof. Milton Gazzetti. Presidente Venceslau
+            </p>
+
+            <p class="lead mb-4">
+              Curso técnico de informática para internet, com duração de 3 anos.
+            </p>
+
+            <a href="#matricula" class="btn btn-primary"> Matricule-se </a>
+          </div>
+
+          <div class="col-lg-5 text-center mt-4 mt-lg-0">
+            <img
+              src="imagens/logo_dragão.png"
+              alt="Lobo Mtec Informática para Internet"
+              class="logo_teste"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container my-5">
+      <div id="carouselMtec" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselMtec"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselMtec"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselMtec"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!-- ATENÇÃO: imagem_1.png, imagem_2.png e imagem_3.png precisam estar na pasta imagens -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="imagens/imagem1"
+              class="d-block w-100"
+              alt="Ilustração de interfaces digitais"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="imagens/imagem2"
+              class="d-block w-100"
+              alt="Tela do Canva para criar um design"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="imagens/imagem3"
+              class="d-block w-100"
+              alt="Configuração de tamanho personalizado no Canva"
+            />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselMtec"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+          <span class="visually-hidden"> Anterior </span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselMtec"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+          <span class="visually-hidden"> Próximo </span>
+        </button>
+      </div>
+    </section>
+
+    <main class="container my-5">
+      <h2 class="text-primary">Mtec Informática para Internet</h2>
+
+      <p>Página principal do website.</p>
+    </main>
+
+    <section id="matricula" class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Aprenda tecnologia</h5>
+
+          <p class="card-text">
+            Desenvolva conhecimentos em programação, design e criação de sites.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Prepare-se para o mercado</h5>
+
+          <p class="card-text">
+            Aprenda habilidades práticas para trabalhar com informática e
+            internet.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Faça sua matrícula</h5>
+
+          <p class="card-text">
+            Entre em contato com a escola para saber mais informações sobre o
+            curso.
+          </p>
+
+          <a href="#" class="btn btn-primary"> Quero me matricular </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
-</html> 
+</html>

@@ -1,0 +1,321 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TEMA ROXO MTEC
+========================================= */
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #1a1033; /* fundo da página (roxo escuro) */
+  --bs-body-bg-rgb: 26, 16, 51;
+  --bs-primary: #7c3aed; /* cor primária (título azul vira roxo) */
+  --bs-primary-rgb: 124, 58, 237;
+  --bs-link-color: #a78bfa;
+  --bs-link-color-rgb: 167, 139, 250;
+  --bs-link-hover-color: #c4b5fd;
+  --bs-link-hover-color-rgb: 196, 181, 253;
+}
+
+/* Barra de navegação: o bg-dark do Bootstrap usa !important, então precisamos dele também */
+.navbar.bg-dark {
+  background-color: #120a24 !important;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+/* Cards com um roxo um pouco mais claro que o fundo */
+.card {
+  --bs-card-bg: #241447;
+  --bs-card-border-color: rgba(167, 139, 250, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* Logo da barra de navegação */
+.logo-navbar,
+.navbar-brand img {
+  display: block;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.navbar .btn {
+  white-space: nowrap;
+}
+
+/* =========================================
+   BANNER PRINCIPAL
+========================================= */
+
+/*
+  O fundo do banner está no style do HTML:
+  url('imagens/baner_teste.png')
+*/
+
+.banner {
+  min-height: 520px;
+  padding: 90px 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.banner > .container {
+  width: 100%;
+}
+
+.banner h1 {
+  line-height: 1.15;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.banner p {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+.banner .lead {
+  max-width: 650px;
+}
+
+/* =========================================
+   LOGO DO LOBO NO BANNER
+========================================= */
+
+.logo_teste {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  max-height: 330px;
+  height: auto;
+  margin: 0 auto;
+
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
+
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.btn-primary {
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+
+  --bs-btn-bg: #7c3aed;
+  --bs-btn-border-color: #7c3aed;
+  --bs-btn-hover-bg: #6d28d9;
+  --bs-btn-hover-border-color: #6d28d9;
+  --bs-btn-active-bg: #5b21b6;
+  --bs-btn-active-border-color: #5b21b6;
+  --bs-btn-disabled-bg: #7c3aed;
+  --bs-btn-disabled-border-color: #7c3aed;
+  --bs-btn-focus-shadow-rgb: 124, 58, 237;
+}
+
+/* =========================================
+   CARROSSEL
+========================================= */
+
+#carouselMtec {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#carouselMtec .carousel-item img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+  background-color: #120a24;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card-group {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.card img {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 75px;
+  }
+
+  .navbar {
+    min-height: 75px;
+  }
+
+  .logo-navbar,
+  .navbar-brand img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .banner {
+    min-height: auto;
+    padding: 70px 0;
+    text-align: center;
+    background-position: center;
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner .lead {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1rem;
+  }
+
+  .logo_teste {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 25px;
+  }
+
+  #carouselMtec .carousel-item img {
+    height: 350px;
+  }
+}
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .logo-navbar,
+  .navbar-brand img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .banner {
+    min-height: auto;
+    padding: 55px 20px 60px;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner p {
+    font-size: 0.9rem;
+  }
+
+  .banner .lead {
+    font-size: 1rem;
+  }
+
+  .logo_teste {
+    width: 100%;
+    max-width: 260px;
+    max-height: 260px;
+    animation: none;
+  }
+
+  #carouselMtec .carousel-item img {
+    height: 250px;
+  }
+
+  .card-group {
+    display: block;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 400px) {
+  .banner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .banner h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo-navbar,
+  .navbar-brand img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo_teste {
+    max-width: 230px;
+    max-height: 230px;
+  }
+}
